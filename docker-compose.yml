@@ -1,0 +1,16 @@
+version: "3.1"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+  lt:
+    build:
+      context: .
+      dockerfile: Dockerfile-lt
+    links:
+      - web
+    command: npx localtunnel --local-host web --port 8000
