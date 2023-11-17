@@ -13,4 +13,4 @@ services:
       dockerfile: Dockerfile-lt
     links:
       - web
-    command: --local-host web --port 8000
+    command: npx localtunnel --local-host web --port 8000
