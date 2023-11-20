@@ -11,6 +11,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile-lt
+      #dockerfile: Dockerfile-rpi
     links:
       - web
     command: npx localtunnel --local-host web --port 8000
